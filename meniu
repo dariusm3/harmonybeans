@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harmony Beans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Parisienne&display=swap" rel="stylesheet" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Poppins',sans-serif;
+      background:#f9f3f3;
+      color:#5b4b49;
+      line-height:1.7;
+      min-height:100vh;
+    }
+    header {
+      text-align:center;
+      padding:70px 20px 60px;
+      box-shadow:0 12px 25px rgba(201,167,176,0.4);
+      border-bottom-left-radius:50px;
+      border-bottom-right-radius:50px;
+      font-family:'Parisienne',cursive;
+      margin-bottom:20px;
+    }
+    header h1:first-child {
+      font-size:4rem;
+      font-weight:700;
+      letter-spacing:3px;
+      margin-bottom:10px;
+      color:#7b5760;
+      text-shadow:1px 1px 2px #d3b7be;
+    }
+    header h1:last-child {
+      font-size:1.8rem;
+      font-weight:400;
+      font-style:italic;
+      opacity:0.8;
+      letter-spacing:1px;
+      color:#8c6c71;
+    }
+    nav {
+      background-color:#e3c7cc;
+      padding:20px 0;
+      box-shadow:0 6px 18px rgba(131,101,109,0.15);
+      display:flex;
+      justify-content:center;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1.3px;
+      border-radius:0 0 40px 40px;
+      margin-bottom:50px;
+    }
+    nav a {
+      color:#5b4b49;
+      text-decoration:none;
+      font-size:1.15rem;
+      padding:12px 22px;
+      border-radius:10px;
+      transition:all 0.3s ease;
+      box-shadow:inset 0 0 0 0 transparent;
+    }
+    nav a:hover {
+      background-color:#b8949a;
+      color:#f7e9ea;
+      box-shadow:inset 0 -4px 0 0 #f7e9ea;
+      font-weight:800;
+    }
+    .container {
+      max-width:1050px;
+      margin:0 auto 70px;
+      padding:45px 50px;
+      background-color:#f2e6e8;
+      border-radius:35px;
+      box-shadow:0 20px 60px rgba(183,146,153,0.15);
+      text-align:center;
+    }
+    .container h2 {
+      font-size:3rem;
+      color:#7b5760;
+      font-weight:700;
+      margin-bottom:30px;
+      letter-spacing:1.5px;
+    }
+    .intro {
+      font-size:1.3rem;
+      color:#946c75;
+      margin-bottom:45px;
+      font-weight:500;
+      font-style:italic;
+      line-height:1.8;
+    }
+    .menu-grid {
+      display:grid;
+      gap:30px;
+      text-align:left;
+    }
+    .menu-section {
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(183,146,153,0.15);
+      transition:transform 0.3s ease,box-shadow 0.3s ease;
+    }
+    .menu-section:hover {
+      box-shadow:0 12px 35px rgba(183,146,153,0.3);
+    }
+    .menu-section h3 {
+      background:#c9a7b0;
+      color:#fff;
+      margin:0;
+      padding:15px;
+      font-size:1.5rem;
+      text-align:center;
+      font-weight:700;
+    }
+    .menu-section:nth-child(even) h3 {
+      background:#b8949a;
+    }
+    .menu-section ul {
+      list-style:none;
+      padding:20px;
+    }
+    .menu-section li {
+      display:flex;
+      justify-content:space-between;
+      padding:10px 0;
+      border-bottom:1px solid #eee;
+      font-size:1rem;
+      color:#5b4b49;
+    }
+    .menu-section li:last-child {
+      border-bottom:none;
+    }
+    .menu-section li span.price {
+      font-weight:700;
+      color:#7b5760;
+    }
+    .features {
+      display:flex;
+      justify-content:center;
+      margin-top:30px;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+    .feature-item {
+      background-color:#d9c6ca;
+      border-radius:25px;
+      padding:30px 40px;
+      max-width:300px;
+      box-shadow:0 12px 30px rgba(183,146,153,0.25);
+      color:#6f5058;
+      font-weight:600;
+      font-size:1.1rem;
+      text-align:center;
+      transition:transform 0.3s ease,box-shadow 0.3s ease;
+      cursor:default;
+    }
+    .feature-item:hover {
+      box-shadow:0 22px 55px rgba(183,146,153,0.5);
+      color:#7b5760;
+    }
+    footer {
+      background-color:#7b5760;
+      text-align:center;
+      padding:25px 15px;
+      color:#f7e9ea;
+      font-size:14px;
+      font-weight:600;
+      border-top-left-radius:40px;
+      border-top-right-radius:40px;
+      letter-spacing:1.2px;
+      box-shadow:0 -5px 20px rgba(183,146,153,0.4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Harmony Beans</h1>
+    <h1>Unde cafeaua întâlnește muzica</h1>
+  </header>
+  <nav>
+    <a href="#">Acasă</a>
+    <a href="#">Despre</a>
+    <a href="#">Meniu</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="container">
+    <h2>Meniu</h2>
+    <p class="intro">Explorează selecția noastră de băuturi, deserturi și vinyl-uri, într-o ambianță muzicală unică.</p>
+    <div class="menu-grid">
+      <div class="menu-section">
+        <h3>Cafele</h3>
+        <ul>
+          <li>Espresso <span class="price">10 lei</span></li>
+          <li>Cappuccino <span class="price">12 lei</span></li>
+          <li>Latte Macchiato <span class="price">14 lei</span></li>
+          <li>Mocha <span class="price">15 lei</span></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Ceaiuri</h3>
+        <ul>
+          <li>Ceai Negru <span class="price">8 lei</span></li>
+          <li>Ceai Verde <span class="price">8 lei</span></li>
+          <li>Ceai de Mușețel <span class="price">9 lei</span></li>
+          <li>Ceai de Mentă <span class="price">9 lei</span></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Deserturi</h3>
+        <ul>
+          <li>Cheesecake <span class="price">16 lei</span></li>
+          <li>Tiramisu <span class="price">18 lei</span></li>
+          <li>Croissant cu unt <span class="price">10 lei</span></li>
+          <li>Brownie cu ciocolată <span class="price">14 lei</span></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Vinyluri</h3>
+        <ul>
+          <li>Beatles – Abbey Road <span class="price">120 lei</span></li>
+          <li>Pink Floyd – Dark Side <span class="price">100 lei</span></li>
+          <li>Queen – Greatest Hits <span class="price">110 lei</span></li>
+          <li>Fleetwood Mac – Rumours <span class="price">115 lei</span></li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h3>Evenimente Live</h3>
+        <ul>
+          <li>Jazz Night (Vinerea, 20:00) <span class="price">Intrare liberă</span></li>
+          <li>Acoustic Sundays (Duminica, 18:00) <span class="price">10 lei</span></li>
+          <li>DJ Sets (Sâmbăta, 22:00) <span class="price">20 lei</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="features">
+      <div class="feature-item"><div class="feature-icon">☕</div>Arome autentice<br>din boabe atent selecționate</div>
+      <div class="feature-item"><div class="feature-icon">🎶</div>Muzică live & viniluri<br>pentru seri memorabile</div>
+      <div class="feature-item"><div class="feature-icon">🌟</div>Ambianță cozy<br>creată cu dragoste pentru detalii</div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Harmony Beans​. Toate drepturile rezervate.</p>
+  </footer>
+</body>
+</html>
